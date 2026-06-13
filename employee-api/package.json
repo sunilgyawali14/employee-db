@@ -1,0 +1,19 @@
+{
+  "name": "employee-api",
+  "version": "1.0.0",
+  "description": "This is the project that stores the records of the employee .. in the database through the employee form",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@prisma/client": "^7.8.0",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "prisma": "^7.8.0"
+  }
+}

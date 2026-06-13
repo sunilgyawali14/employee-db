@@ -1,10 +1,10 @@
 {
   "name": "employee-api",
   "version": "1.0.0",
-  "description": "This is the project that stores the records of the employee .. in the database through the employee form",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon "
+    "dev": "nodemon index.js"
   },
   "keywords": [],
   "author": "",
@@ -12,11 +12,16 @@
   "type": "commonjs",
   "dependencies": {
     "@prisma/client": "^7.8.0",
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.6",
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
-    "prisma": "^7.8.0"
+    "express-validator": "^7.3.2",
+    "helmet": "^8.2.0",
+    "uuid": "^14.0.0"
   },
   "devDependencies": {
-    "nodemon": "^3.1.14"
+    "nodemon": "^3.1.14",
+    "prisma": "^7.8.0"
   }
 }

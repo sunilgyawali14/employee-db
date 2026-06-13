@@ -1,4 +1,14 @@
 node_modules/
 .env
-
 /generated/prisma
+
+/src/generated/prisma
+node_modules/
+.env
+.env.local
+.env.*.local
+*.log
+dist/
+build/
+.DS_Store
+prisma/dev.db

@@ -1,7 +1,22 @@
-const { PrismaClient } = require("@prisma/client");
 const { v4: uuidv4 } = require("uuid");
 
-const prisma = new PrismaClient();
+let prisma;
+try {
+  const { PrismaClient } = require("@prisma/client");
+  prisma = new PrismaClient();
+} catch (err) {
+  console.error("Prisma client initialization failed. Run `npx prisma generate` to generate the client. Error:", err && err.message);
+  // Fallback stub to avoid app crash; operations will throw a clear error when used.
+  const notGeneratedError = () => { throw new Error("Prisma client is not generated. Run `npx prisma generate`."); };
+  prisma = {
+    employee: {
+      create: async () => notGeneratedError(),
+      findMany: async () => notGeneratedError(),
+      findUnique: async () => notGeneratedError(),
+      update: async () => notGeneratedError(),
+    },
+  };
+}
 
 class EmployeeModel {
   static async createEmployee(data) {
